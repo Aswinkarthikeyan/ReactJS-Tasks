@@ -1,0 +1,11 @@
+// Checking whether it's Even or not!?
+
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+The loop starts from 1 and goes up to 20.
+Each time it checks whether the number is even using % 2 === 0. 
+If it is even, it prints the number. Then i++ increases the number by 1, and the loop keeps repeating until it reaches 20.
