@@ -1,0 +1,965 @@
+30 Variable Names:
+
+1.  userName
+2.  userFirstName
+3.  userLastName
+4.  userAge
+5.  userEmail
+6.  emailAddress
+7.  userPhoneNumber
+8.  userContact
+9.  createPassword
+10. confirmPassword
+11. userID
+12. UserPassword
+13. submitButton
+14. productName
+15. productPrice
+16. inputBox1
+17. inputBox2
+18. formSubmit
+19. loginButton
+20. logoutButton
+21. signinButton
+22. signoutButton
+23. addToCart
+24. buyNow
+25. addtoFav
+26. deleteItem
+27. addItem
+28. alertMessage
+29. displayResult
+30. resultDisplay
+
+
+
+
+IMPORTANT BASIC TERMS
+
+Variable
+-> Named reference used to store a value.
+
+Value
+-> Actual data assigned to a variable.
+
+Data Type
+-> Type/category of the value.
+
+Operator
+-> Symbol used to perform an operation.
+
+Statement
+-> Instruction executed by JavaScript.
+
+Expression
+-> Code that produces a value.
+
+Function
+-> Reusable block of code.
+
+Scope
+-> Area where a variable can be accessed.
+
+DOM
+-> Object representation of an HTML document.
+
+Syntax
+-> Rules for writing JavaScript correctly.
+
+Execution
+-> Running the JavaScript instructions.
+
+
+1. JAVASCRIPT
+
+
+JavaScript is a high-level, dynamically typed programming
+language used to add logic, behaviour and interactivity
+to applications.
+
+It manages data through variables, data types, operators,
+functions and scope while following defined syntax and
+statements during execution.
+
+It interacts with web pages through the DOM and supports
+browser-based data handling using storage, cookies, and cache.
+
+HTML        -> Structure
+CSS         -> Styling
+JavaScript  -> Logic / Behaviour
+
+
+2. MEMORY
+
+
+JavaScript uses memory to store data while the program runs.
+
+Stack:
+-> Stores execution-related data
+-> Function calls
+-> Local variables
+
+Heap:
+-> Stores objects
+-> Arrays
+-> Dynamically created data
+*/
+
+
+/*
+============================================================
+3. EXECUTION
+============================================================
+
+JavaScript executes code generally from top to bottom.
+
+Example:
+
+
+let a = 10;                 // STATEMENT | 10 -> EXPRESSION
+let b = 20;                 // STATEMENT | 20 -> EXPRESSION
+let c = a + b;              // STATEMENT | a + b -> EXPRESSION
+
+
+4. SYNTAX
+
+
+Syntax means the rules used to write JavaScript correctly.
+
+Example:
+
+
+let name = "Aswin";         // STATEMENT | "Aswin" -> EXPRESSION
+
+
+5. VARIABLES
+
+
+Variables are named references used to store values.
+
+var:
+-> Can be redeclared
+-> Can be reassigned
+
+let:
+-> Cannot be redeclared in the same scope
+-> Can be reassigned
+
+const:
+-> Cannot be redeclared
+-> Cannot be reassigned
+
+
+var age = 23;               // STATEMENT | 23 -> EXPRESSION
+
+age = 24;                   // EXPRESSION STATEMENT
+                            // age = 24 -> EXPRESSION
+
+var age = 25;               // STATEMENT | 25 -> EXPRESSION
+
+let score = 50;             // STATEMENT | 50 -> EXPRESSION
+
+score = 75;                 // EXPRESSION STATEMENT
+                            // score = 75 -> EXPRESSION
+
+const country = "India";    // STATEMENT | "India" -> EXPRESSION
+
+
+
+6. UNDEFINED
+
+
+A variable is undefined when it has been declared
+but no value has been assigned.
+
+
+var data;                   // STATEMENT
+
+console.log(data);          // EXPRESSION STATEMENT
+                            // console.log(data) -> EXPRESSION
+
+
+
+
+7. CASING
+
+
+JavaScript is case-sensitive.
+
+name
+Name
+NAME
+
+All three are different variable names.
+
+Common casing styles:
+
+camelCase
+PascalCase
+snake_case
+UPPER_SNAKE_CASE
+
+
+let firstName = "Aswin";            // STATEMENT | "Aswin" -> EXPRESSION
+let StudentName = "Karthikeyan";   // STATEMENT | "Karthikeyan" -> EXPRESSION
+let phone_number = "9876543210";   // STATEMENT | string value -> EXPRESSION
+const MAX_VALUE = 100;             // STATEMENT | 100 -> EXPRESSION
+
+
+
+8. DATA TYPES
+
+
+Data type tells JavaScript what type of value is stored.
+
+Primitive Data Types:
+
+1. String
+2. Number
+3. Boolean
+4. Undefined
+5. Null
+6. BigInt
+7. Symbol
+
+Non-Primitive / Reference Types:
+
+1. Object
+2. Array
+3. Function
+
+
+
+// String
+
+let userName = "Aswin";             // STATEMENT | "Aswin" -> EXPRESSION
+
+
+// Number
+
+let userAge = 23;                   // STATEMENT | 23 -> EXPRESSION
+
+
+// Boolean
+
+let isLoggedIn = true;              // STATEMENT | true -> EXPRESSION
+
+
+// Undefined
+
+let userData;                       // STATEMENT
+
+
+// Null
+
+let selectedUser = null;            // STATEMENT | null -> EXPRESSION
+
+
+// BigInt
+
+let bigNumber = 12345678901234567890n;
+// STATEMENT | BigInt value -> EXPRESSION
+
+
+// Symbol
+
+let id = Symbol("id");
+// STATEMENT | Symbol("id") -> EXPRESSION
+
+
+// Object
+
+let product = {                     // STATEMENT | object literal -> EXPRESSION
+    name: "Laptop",
+    price: 50000
+};
+
+
+// Array
+
+let fruits = ["Apple", "Mango", "Orange"];
+// STATEMENT | array literal -> EXPRESSION
+
+
+
+8. OPERATORS
+
+
+Operators are symbols used to perform operations
+on values.
+
+AACL:
+
+A -> Arithmetic
+A -> Assignment
+C -> Comparison
+L -> Logical
+
+-------------------------
+A - ARITHMETIC OPERATORS
+-------------------------
+
++
+-
+*
+/
+%
+**
+
+
+let a = 10;                         // STATEMENT | 10 -> EXPRESSION
+let b = 3;                          // STATEMENT | 3 -> EXPRESSION
+
+let addition = a + b;               // STATEMENT | a + b -> EXPRESSION
+
+let subtraction = a - b;            // STATEMENT | a - b -> EXPRESSION
+
+let multiplication = a * b;         // STATEMENT | a * b -> EXPRESSION
+
+let division = a / b;               // STATEMENT | a / b -> EXPRESSION
+
+let remainder = a % b;              // STATEMENT | a % b -> EXPRESSION
+
+let power = a ** b;                 // STATEMENT | a ** b -> EXPRESSION
+
+
+
+-------------------------
+A - ASSIGNMENT OPERATORS
+-------------------------
+
+=
++=
+-=
+*=
+/=
+%=
+
+
+let amount = 100;                   // STATEMENT | 100 -> EXPRESSION
+
+amount += 50;                       // EXPRESSION STATEMENT
+                                    // amount += 50 -> EXPRESSION
+
+amount -= 20;                       // EXPRESSION STATEMENT
+                                    // amount -= 20 -> EXPRESSION
+
+amount *= 2;                        // EXPRESSION STATEMENT
+                                    // amount *= 2 -> EXPRESSION
+
+
+
+-------------------------
+C - COMPARISON OPERATORS
+-------------------------
+
+==
+===
+!=
+!==
+>
+<
+>=
+<=
+
+
+let result1 = 5 == "5";
+// STATEMENT | 5 == "5" -> EXPRESSION
+
+let result2 = 5 === "5";
+// STATEMENT | 5 === "5" -> EXPRESSION
+
+let result3 = 10 != 5;
+// STATEMENT | 10 != 5 -> EXPRESSION
+
+let result4 = 10 !== "10";
+// STATEMENT | 10 !== "10" -> EXPRESSION
+
+let result5 = 10 > 5;
+// STATEMENT | 10 > 5 -> EXPRESSION
+
+let result6 = 5 < 10;
+// STATEMENT | 5 < 10 -> EXPRESSION
+
+
+
+-------------------------
+L - LOGICAL OPERATORS
+-------------------------
+
+&& -> AND
+|| -> OR
+!  -> NOT
+
+
+let result7 = (10 > 5) && (20 > 10);
+// STATEMENT | entire right side -> EXPRESSION
+
+let result8 = (10 > 20) || (20 > 10);
+// STATEMENT | entire right side -> EXPRESSION
+
+let result9 = !(10 > 20);
+// STATEMENT | !(10 > 20) -> EXPRESSION
+
+
+
+9. SELECTION / CONDITIONAL STATEMENTS
+
+
+Selection statements are used to make decisions
+based on conditions.
+
+Types:
+
+1. if
+2. if...else
+3. else if
+4. switch
+5. ternary operator
+
+
+
+
+// if
+
+
+
+let ageCheck = 20;
+// STATEMENT
+
+if (ageCheck >= 18) {
+// ageCheck >= 18 -> EXPRESSION
+// if (...) {} -> STATEMENT
+
+
+console.log("Adult");
+// console.log("Adult") -> EXPRESSION
+// Entire line -> EXPRESSION STATEMENT
+
+
+}
+
+
+
+// if...else
+
+
+
+let votingAge = 16;
+// STATEMENT
+
+if (votingAge >= 18) {
+// votingAge >= 18 -> EXPRESSION
+// if...else -> STATEMENT
+
+
+console.log("Eligible");
+// EXPRESSION STATEMENT
+
+
+} else {
+
+
+console.log("Not Eligible");
+// EXPRESSION STATEMENT
+
+
+}
+
+
+
+// else if
+
+
+
+let mark = 85;
+// STATEMENT
+
+if (mark >= 90) {
+// mark >= 90 -> EXPRESSION
+
+
+console.log("A+");
+// EXPRESSION STATEMENT
+
+
+} else if (mark >= 75) {
+// mark >= 75 -> EXPRESSION
+
+
+console.log("A");
+// EXPRESSION STATEMENT
+
+
+} else if (mark >= 50) {
+// mark >= 50 -> EXPRESSION
+
+
+console.log("B");
+// EXPRESSION STATEMENT
+
+
+} else {
+
+
+console.log("Fail");
+// EXPRESSION STATEMENT
+
+
+}
+
+
+
+// switch
+
+
+
+let day = 2;
+// STATEMENT
+
+switch (day) {
+// day -> EXPRESSION
+// switch -> STATEMENT
+
+
+case 1:
+    console.log("Monday");
+    // EXPRESSION STATEMENT
+
+    break;
+    // STATEMENT
+
+case 2:
+    console.log("Tuesday");
+    // EXPRESSION STATEMENT
+
+    break;
+    // STATEMENT
+
+default:
+    console.log("Invalid Day");
+    // EXPRESSION STATEMENT
+
+
+}
+
+
+
+// Ternary Operator
+
+condition ? value1 : value2
+
+
+ageCheck >= 18 ? "Adult" : "Minor";
+// EXPRESSION
+
+let status = ageCheck >= 18 ? "Adult" : "Minor";
+// Entire line -> STATEMENT
+// ageCheck >= 18 ? "Adult" : "Minor" -> EXPRESSION
+
+
+
+10. SCOPE
+
+Scope means the area where a variable can be accessed.
+
+Types of Scope:
+
+1. Global Scope
+2. Function Scope
+3. Block Scope
+
+
+
+
+## Global Scope
+
+A variable declared outside functions or blocks
+can have global scope.
+
+
+let globalVariable = "Global";
+// STATEMENT
+
+function showGlobal() {
+// FUNCTION DECLARATION -> STATEMENT
+
+
+console.log(globalVariable);
+// console.log(globalVariable) -> EXPRESSION
+// Entire line -> EXPRESSION STATEMENT
+
+
+}
+
+
+
+## Function Scope
+
+Variables declared using var inside a function
+are available within that function.
+
+
+function exampleFunction() {
+// FUNCTION DECLARATION -> STATEMENT
+
+
+var functionVariable = "Function Scope";
+// STATEMENT
+
+console.log(functionVariable);
+// EXPRESSION STATEMENT
+
+
+}
+
+
+
+## Block Scope
+
+Variables declared using let and const inside {}
+are available only inside that block.
+
+
+if (true) {
+// true -> EXPRESSION
+// if block -> STATEMENT
+
+
+let blockVariable = "Block Scope";
+// STATEMENT
+
+const blockValue = 100;
+// STATEMENT
+
+console.log(blockVariable);
+// EXPRESSION STATEMENT
+
+console.log(blockValue);
+// EXPRESSION STATEMENT
+
+
+}
+
+
+IMPORTANT:
+
+var   -> Function Scope
+let   -> Block Scope
+const -> Block Scope
+
+
+
+
+11. STATEMENT
+
+A statement is an instruction given to JavaScript
+to perform an action.
+
+Examples:
+
+let age = 23;
+console.log(age);
+if (...) {}
+function test() {}
+
+
+let studentAge = 23;
+// STATEMENT
+
+console.log(studentAge);
+// EXPRESSION STATEMENT
+
+
+IMPORTANT:
+
+A statement can contain an expression.
+
+Example:
+
+let age = 23;
+
+Entire line
+-> STATEMENT
+
+23
+-> EXPRESSION
+
+
+
+12. EXPRESSION
+
+An expression is a piece of code that produces a value.
+
+Examples:
+
+10 + 20
+age >= 18
+"Hello " + name
+function call
+object creation
+
+
+let total = 10 + 20;
+// Entire line -> STATEMENT
+// 10 + 20 -> EXPRESSION
+
+let adult = studentAge >= 18;
+// Entire line -> STATEMENT
+// studentAge >= 18 -> EXPRESSION
+
+let message = "Hello " + userName;
+// Entire line -> STATEMENT
+// "Hello " + userName -> EXPRESSION
+
+
+IMPORTANT:
+
+let total = 10 + 20;
+
+Entire line
+-> STATEMENT
+
+10 + 20
+-> EXPRESSION
+
+
+
+13. TYPE CONVERSION
+
+Type conversion means changing a value from one
+data type to another.
+
+Types:
+
+1. Explicit Type Conversion
+2. Implicit Type Conversion
+
+
+
+
+## Explicit Conversion
+
+The programmer manually converts the data type.
+
+
+let stringAge = "23";
+// STATEMENT
+
+let numberAge = Number(stringAge);
+// Entire line -> STATEMENT
+// Number(stringAge) -> EXPRESSION
+// Function call expression
+
+let textNumber = String(100);
+// Entire line -> STATEMENT
+// String(100) -> EXPRESSION
+
+let booleanValue = Boolean(1);
+// Entire line -> STATEMENT
+// Boolean(1) -> EXPRESSION
+
+
+
+## Implicit Conversion
+
+JavaScript automatically converts the data type
+during certain operations.
+
+This is also called Type Coercion.
+
+
+let value1 = "10" + 5;
+// Entire line -> STATEMENT
+// "10" + 5 -> EXPRESSION
+
+let value2 = "10" - 5;
+// Entire line -> STATEMENT
+// "10" - 5 -> EXPRESSION
+
+
+
+14. FUNCTIONS
+
+A function is a reusable block of code designed
+to perform a particular task.
+
+A function can:
+
+* Accept input
+* Process data
+* Return output
+* Be reused
+
+## Function Declaration
+
+
+
+function addNumbers(a, b) {
+// FUNCTION DECLARATION -> STATEMENT
+
+
+return a + b;
+// return -> STATEMENT
+// a + b -> EXPRESSION
+
+
+}
+
+
+Function Call
+
+
+let sum = addNumbers(10, 20);
+// Entire line -> STATEMENT
+// addNumbers(10, 20) -> EXPRESSION
+// Function Call Expression
+
+
+
+15. FUNCTION EXPRESSION
+
+A function can be stored inside a variable.
+
+This is called a Function Expression.
+
+
+const greet = function () {
+// Entire line -> STATEMENT
+// function () {...} -> FUNCTION EXPRESSION
+
+
+console.log("Hello");
+// EXPRESSION STATEMENT
+
+
+};
+
+
+
+16. ARROW FUNCTION
+
+Arrow function is a shorter way of writing a function.
+
+
+const add = (a, b) => {
+// Entire line -> part of a VARIABLE DECLARATION STATEMENT
+// (a, b) => {...} -> ARROW FUNCTION EXPRESSION
+
+
+return a + b;
+// STATEMENT
+// a + b -> EXPRESSION
+
+
+};
+
+
+Short form:
+
+const add = (a, b) => a + b;
+
+Entire line
+-> STATEMENT
+
+(a, b) => a + b
+-> ARROW FUNCTION EXPRESSION
+
+a + b
+-> EXPRESSION
+
+
+
+17. STATIC & DYNAMIC TYPING
+
+Static Typing:
+
+The data type is generally determined and checked
+before execution.
+
+Example languages:
+Java
+C
+C++
+
+Dynamic Typing:
+
+The data type can change during program execution.
+
+JavaScript is dynamically typed.
+
+
+let value = 10;
+// STATEMENT
+
+value = "Hello";
+// Entire line -> EXPRESSION STATEMENT
+// value = "Hello" -> ASSIGNMENT EXPRESSION
+
+value = true;
+// Entire line -> EXPRESSION STATEMENT
+// value = true -> ASSIGNMENT EXPRESSION
+
+
+The same variable can hold different data types
+at different times.
+
+
+
+18. DOM
+
+DOM stands for:
+
+Document Object Model
+
+The DOM represents an HTML document as objects.
+
+JavaScript can use the DOM to:
+
+* Select HTML elements
+* Change text
+* Change styles
+* Add elements
+* Remove elements
+* Handle events
+
+Example:
+
+document.getElementById("title");
+
+DOM is mainly used when JavaScript works with
+HTML pages.
+
+
+document.getElementById("title");
+// EXPRESSION
+
+
+If used as:
+
+document.getElementById("title");
+
+the entire line becomes an EXPRESSION STATEMENT.
+
+
+
+19. STORAGE
+
+Storage means keeping data so that it can be used later.
+
+JavaScript can work with different types of storage,
+such as:
+
+1. Variables
+2. Objects
+3. Arrays
+4. localStorage
+5. sessionStorage
+
+Example:
+
+localStorage stores data in the browser.
+
+sessionStorage stores data for the current
+browser session.
+
