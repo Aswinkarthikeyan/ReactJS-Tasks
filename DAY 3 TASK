@@ -37,5 +37,27 @@ check.deposit(500)
 check.deposit(500)
 check.getBalance()
 
+// Task 3
+
+function createCounter(){
+    let count=0;
+    function increment(){
+        count++
+    }
+    function decrement(){
+        count--
+    }
+    function getCount(){
+        console.log("Count:", count)
+    }
+    return {increment, decrement, getCount}
+}
+let counter = createCounter()
+counter.increment()
+counter.increment()
+counter.increment()
+counter.decrement()
+counter.getCount()
+
 
 </script>
