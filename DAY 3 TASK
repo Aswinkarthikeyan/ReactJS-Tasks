@@ -17,4 +17,25 @@ let account = createbankAccount()
 account();
 
 
+
+// Task 2
+
+function createAccount(){
+    let bal = 1000
+    function deposit(cash){
+        bal += cash
+    }
+    function getBalance(){
+        console.log("Current Balance:", bal)
+    }
+    return {deposit, getBalance}
+
+}
+let check = createAccount();
+check.deposit(500)
+check.deposit(500)
+check.deposit(500)
+check.getBalance()
+
+
 </script>
