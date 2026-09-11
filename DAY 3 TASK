@@ -1,0 +1,20 @@
+<script>
+// Task 1
+
+let balance = 100000;
+
+function createbankAccount(){
+    let balance = 5000;
+    function checkBalance(){
+        console.log("Account Balance:", balance)
+    }
+    return checkBalance;
+}
+console.log("Outside Balance:", balance)
+
+let account = createbankAccount()
+
+account();
+
+
+</script>
