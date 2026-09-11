@@ -59,5 +59,31 @@ counter.increment()
 counter.decrement()
 counter.getCount()
 
+// Task 4
+let salary = 10000
+function createEmployee(name, initialSalary){
+    let salary = initialSalary
+    let Name = name
+    function getName(){
+        
+        console.log('Name:', Name)
+    }
+    function getSalary(){
+        console.log('Salary:',salary)
+    }
+    function increaseSalary(amount){
+        
+        salary +=amount;
+        console.log("Increased Salary:", salary)
+    }
+
+    return {getName, getSalary, increaseSalary}
+}
+let employee = createEmployee("Arun", 25000)
+console.log(employee.getSalary())
+employee.increaseSalary(5000)
+console.log(employee.getName())
+console.log(employee.getSalary())
+
 
 </script>
