@@ -1,0 +1,46 @@
+<script>
+    // TASK 1
+
+    let balance = 100000
+    function createBankAccount(){
+        let updateSalary;
+        let balance = 20000
+        return updateSalary= (amount)=>{
+            balance+=amount;
+            console.log('Updated Balance:',balance)
+        }
+    }
+
+    const employee = createBankAccount()
+   // console.log(updateSalary(5000)) 
+   // says, updateSalary is not a function. But a fnt is stored in it, how can the error says, its not a function?
+
+    console.log(employee(5000))
+    console.log(employee(3000))
+    console.log(balance)
+
+    // TASK 2
+
+    function createStock(){
+        let stock = 10
+        return{
+            addStock: (demand)=>{
+                stock+=demand
+                console.log('Total Stocks:', stock)
+            }, sellProduct: (demand)=>{
+                if(demand>stock){
+                    console.log("Insufficient Quantities!")
+                }
+                else{
+                    stock-=demand
+                    console.log('Available Stock:',stock)
+                }
+            }
+        }
+    }
+    const product = createStock()
+    console.log(product.addStock(5))
+    console.log(product.sellProduct(3))
+    console.log(product.sellProduct(2))
+
+</script>
