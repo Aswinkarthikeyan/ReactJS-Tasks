@@ -1,0 +1,65 @@
+<script>
+    // TASK 1
+    let salaries = [15000, 20000, 25000, 30000, 35000];
+    let result = salaries.map((e,i)=>{
+        return e+2000;
+    })
+    console.log(salaries)
+    console.log(result)
+
+
+    // TASK 2
+    let marks = [35, 78, 42, 90, 25, 67, 55];
+    let res = marks.filter((e,i)=>{
+        if(e>=50){
+            return e
+        }
+    })
+    console.log(marks)
+    console.log(res)
+
+
+    // TASK 3
+    let products = [{ id: 101, name: "Laptop", price: 55000 },{ id: 102, name: "Mouse", price: 800 },{ id: 103, name: "Keyboard", price: 1500 },{ id: 104, name: "Monitor", price: 12000 }];
+
+    let newprod = products.find((e,i)=>e.id==103?e:null)
+    console.log(newprod)
+
+    
+    // TASK 4
+    let cart = [{ name: "Shirt", price: 1200 },{ name: "Shoes", price: 2500 },{ name: "Watch", price: 3000 },{ name: "Bag", price: 1500 }];
+
+    let total = cart.reduce((a,cur)=>{
+        return a+cur.price
+    },0)
+    console.log(total)
+
+
+    // TASK 5
+    let students = [{ id: 1, name: "Arun", mark: 85 },{ id: 2, name: "Bala", mark: 45 },{ id: 3, name: "Kumar", mark: 72 },{ id: 4, name: "Priya", mark: 95 },{ id: 5, name: "Ravi", mark: 38 }];
+    // MAP
+    let stuname= students.map((e,i)=>{
+        return e.name
+    })
+    console.log(stuname)
+
+    // FILTER
+    let stumark = students.filter((e,i)=>e.mark>=60).map((e)=>e.name)
+    console.log(stumark)
+
+    // FIND
+    let findstu = students.find((e,i)=>e.id===4?e:null)
+    console.log(findstu)
+
+    // REDUCE TO TOTAL MARK
+    let totalmark = students.reduce((a,cur)=>{
+        return a+cur.mark
+    },0)
+    console.log("Total Marks of the Student:",totalmark)
+
+    // REDUCE TO AVERAGE MARK
+    let averagemark = students.reduce((a,cur)=>{
+        return totalmark/a;
+    },5)
+    console.log("Average Mark:", averagemark)
+</script>
