@@ -1,0 +1,296 @@
+<script>
+
+    // TASK 1
+    let customerName = "Arun";
+    let unitsConsumed = 250;
+    let bill;
+
+    if (unitsConsumed <= 100) {
+        bill = unitsConsumed * 2;
+    }
+    else if (unitsConsumed <= 200) {
+        bill = (100 * 2) + ((unitsConsumed - 100) * 3);
+    }
+    else {
+        bill = (100 * 2) + (100 * 3) + ((unitsConsumed - 200) * 5);
+    }
+
+    console.log("Customer:", customerName);
+    console.log("Units:", unitsConsumed);
+    console.log("Bill: ₹" + bill);
+
+
+    // TASK 2
+    let balance = 15000;
+    let withdrawAmount = 4000;
+
+    if (withdrawAmount <= 0) {
+        console.log("Invalid withdrawal amount");
+    }
+    else if (withdrawAmount % 500 !== 0) {
+        console.log("Amount must be a multiple of 500");
+    }
+    else if (withdrawAmount > balance) {
+        console.log("Insufficient balance");
+    }
+    else {
+        balance = balance - withdrawAmount;
+        console.log("Withdrawal successful");
+        console.log("Remaining balance:", balance);
+    }
+
+
+    // TASK 3
+    let correctPin = 1234;
+    let enteredPin = [1111, 2222, 1234];
+
+    for (let i = 0; i < 3; i++) {
+
+        if (enteredPin[i] === correctPin) {
+            console.log("Login Successful");
+            break;
+        }
+        else {
+            console.log("Incorrect PIN");
+        }
+
+        if (i === 2) {
+            console.log("Account Blocked");
+        }
+    }
+
+
+    // TASK 4
+    let price = 250;
+
+    for (let quantity = 1; quantity <= 5; quantity++) {
+
+        let total = quantity * price;
+
+        console.log("Quantity " + quantity + " = ₹" + total);
+    }
+
+
+    // TASK 5
+    let rows = 3;
+    let seats = 5;
+
+    for (let row = 1; row <= rows; row++) {
+
+        for (let seat = 1; seat <= seats; seat++) {
+
+            console.log("Row " + row + " - Seat " + seat);
+        }
+    }
+
+
+    // TASK 6
+    function calculateDelivery(amount) {
+
+    let deliveryCharge;
+
+    if (amount >= 1000) {
+        deliveryCharge = 0;
+    }
+    else if (amount >= 500) {
+        deliveryCharge = 50;
+    }
+    else {
+        deliveryCharge = 100;
+    }
+
+    return amount + deliveryCharge;
+    }
+
+    console.log(calculateDelivery(1200));
+    console.log(calculateDelivery(700));
+    console.log(calculateDelivery(300));
+
+
+    // TASK 7
+    let sales = [12000, 18000, 9500, 25000, 16000];
+
+    let highest = sales[0];
+
+    for (let i = 1; i < sales.length; i++) {
+
+        if (sales[i] > highest) {
+            highest = sales[i];
+        }
+    }
+
+    console.log(highest);
+
+
+    // TASK 8
+    let numbers = [1, 2, 3, 2, 1];
+
+    let isPalindrome = true;
+
+    for (let i = 0; i < numbers.length / 2; i++) {
+
+        if (numbers[i] !== numbers[numbers.length - 1 - i]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome) {
+        console.log("Palindrome");
+    }
+    else {
+        console.log("Not a Palindrome");
+    }
+
+
+    // TASK 9
+    let marks = [45, 78, 32, 90, 67];
+
+    let graceMarks = marks.map((mark) => {
+        return mark + 5;
+    });
+
+    let passedMarks = graceMarks.filter((mark) => {
+        return mark >= 50;
+    });
+
+    console.log("After Grace Marks:", graceMarks);
+    console.log("Marks 50 or above:", passedMarks);
+
+
+    // TASK 10
+    let employees = [
+    { id: 101, name: "Arun", salary: 25000 },
+    { id: 102, name: "Priya", salary: 35000 },
+    { id: 103, name: "Kumar", salary: 30000 }
+    ];
+
+    let employee = employees.find((e) => {
+        return e.id === 102;
+    });
+
+    console.log("Employee Name:", employee.name);
+    console.log("Employee Salary:", employee.salary);
+
+
+    // TASK 11
+    let cart = [
+    { name: "Shirt", price: 1000 },
+    { name: "Shoes", price: 2500 },
+    { name: "Bag", price: 1500 }
+    ];
+
+    let total = cart.reduce((sum, item) => {
+        return sum + item.price;
+    }, 0);
+
+    console.log(total);
+
+
+    // TASK 12
+    function createAccount() {
+
+    let balance = 5000;
+
+    return function(depositAmount) {
+
+        balance = balance + depositAmount;
+
+        return balance;
+    };
+    }
+
+    let deposit = createAccount();
+
+    console.log(deposit(1000));
+    console.log(deposit(2000));
+    console.log(deposit(500));
+
+
+    // TASK 13
+    function processOrder(productName, callback) {
+
+    console.log("Processing " + productName);
+
+    setTimeout(function() {
+
+        callback("Order Confirmed");
+
+    }, 2000);
+    }
+
+    processOrder("Laptop", function(result) {
+
+        console.log(result);
+
+    });
+
+
+    // TASK 14
+    function makePayment(amount) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (amount > 0) {
+            resolve("Payment Successful");
+        }
+        else {
+            reject("Invalid Payment Amount");
+        }
+
+    });
+}
+
+    makePayment(2500)
+        .then(function(result) {
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+    makePayment(0)
+        .then(function(result) {
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+
+        // TASL 15
+        function checkStock(stock) {
+
+    return new Promise(function(resolve, reject) {
+
+        if (stock > 0) {
+            resolve("Stock Available");
+        }
+        else {
+            reject("Out of Stock");
+        }
+
+        });
+    }
+
+
+    async function placeOrder() {
+
+        try {
+
+            let result = await checkStock(5);
+
+            console.log(result);
+            console.log("Order Placed");
+
+        }
+        catch (error) {
+
+            console.log(error);
+
+        }
+    }
+
+    placeOrder();
+
+</script>
