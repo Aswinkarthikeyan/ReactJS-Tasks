@@ -1,0 +1,13 @@
+If Website = Car{
+
+Car body=HTML
+Paint & design=CSS
+Engine=JavaScript
+Dashboard=Frontend UI
+Engine control system=React
+Gearbox / internal logic=Backend
+Fuel system=Database
+Driver=User
+Road=Internet
+Garage=Server / Hosting
+}
